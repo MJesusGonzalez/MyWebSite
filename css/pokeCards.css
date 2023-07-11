@@ -1,4 +1,4 @@
-/*ALL*/
+/* ALL */
 * {
     margin: 0;
     padding: 0;
@@ -8,17 +8,38 @@
 
 body {
     height: 100vh;
-    background-color: #121B24;
+
 }
 
-/*NAVBAR*/
+/* HEADER Y NAVBAR */
 
-.nav-item {
-    list-style: none;
+header {
+    position: relative;
+    /* cambiar: BORRAR? colocar en el .navbar? */
+}
+
+.navbar {
+    width: 100%;
+    height: 90px;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    background-color: #121B24;
+    justify-content: space-between;
+}
+
+/* NAVBAR UL */
+.navbar-nav {
+    display: flex;
+    gap: 2rem;
 }
 
 .navbar-nav .nav-link.active {
     color: rgba(255, 255, 255, 1.0);
+}
+
+.nav-item {
+    list-style: none;
 }
 
 .nav-link {
@@ -41,9 +62,96 @@ a.nav-link:hover {
 }
 
 
-/*
-FOOTER
-*/
+/* TOGGLE BUTTON */
+.toggle_btn {
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* ACTION BUTTON */
+.action_btn {
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: #489193;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0px;
+    width: 300px;
+    background-color: rgba(18, 27, 36, 0.7);
+    backdrop-filter: blur(100px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 215px;
+}
+
+.dropdown_menu .nav-item {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .nav-link.active {
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE NAVBAR */
+
+@media (max-width: 792px) {
+
+    .navbar .navbar-nav,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+/* MEDIA */
+
+/* FOOTER */
 
 footer {
     clear: both;
@@ -51,11 +159,6 @@ footer {
     background-color: #121B24;
     height: 30px;
 }
-
-/*
-MEDIA
-*/
-
 
 /*
 #5FBCC0
