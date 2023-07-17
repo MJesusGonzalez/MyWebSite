@@ -5,55 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--FONT AWESOME CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--CUSTOM-->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header class="head_nav">
-        <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" alt="logo" width="200" height="64.18" class="d-inline-block align-text-top">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a>
+                    <img src="./img/logo.png" alt="logo" width="200" height="64.18">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="html/pokeCards.html">PokeCards</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Movies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Games</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </nav>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./html/pokeCards.html">PokeCards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Movies</a>
+                </li>
+            </ul>
+            <a href="#" class="action_btn">Log</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./html/pokeCards.html">PokeCards</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Games</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Movies</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="action_btn">Log</a>
+            </li>
+        </div>
     </header>
 
-    <div class="wrapper">
-        <section class="contentIndex"></section>
+    <main>
+        <section id="main_content">
+            <h1> Welcome </h1>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione explicabo facere recusandae repudiandae
+            cupiditate atque consectetur aperiam sed iste repellendus, incidunt, hic soluta velit alias. Nulla laborum
+            ut dolor rem?
+        </section>
+    </main>
 
-        <aside></aside>
+    <footer>
+        &copy; 2023 Jesus González
+    </footer>
 
-        <footer>
-            &copy; 2023 Jesus González
-        </footer>
-    </div>
-
-    <!--BOOTSTRAP-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dropdownMenu.js"></script>
 </body>
 
 </html>
