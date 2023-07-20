@@ -11,11 +11,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--CUSTOM-->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pokeCards.css">
 </head>
 
 <body>
     <header>
-        <div class="navbar">
+        <nav class="navbar">
             <div class="logo">
                 <a>
                     <img src="../img/logo.png" alt="logo" width="200" height="64.18">
@@ -36,10 +37,10 @@
                 </li>
             </ul>
             <a href="#" class="action_btn">Log</a>
-            <div class="toggle_btn">
+            <button class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
+            </button>
+        </nav>
 
         <div class="dropdown_menu">
             <li class="nav-item">
@@ -61,6 +62,19 @@
     </header>
 
     <main>
+        <section id="main-nav">
+            <nav class="navbar-filter">
+                <ul class="nav-filter-list">
+                    <li class="nav-filter-item"><button class="btn-main-nav" id="todos"> Todos </button></li>
+                    <li class="nav-filter-item"><button class="btn-main-nav normal" id="normal"> Normal </button></li>
+                    <li class="nav-filter-item"><button class="btn-main-nav fire" id="fire"> Fuego </button></li>
+                    <li class="nav-filter-item"><button class="btn-main-nav water" id="water"> Agua </button></li>
+                    <li class="nav-filter-item"><button class="btn-main-nav grass" id="grass"> Planta </button></li>
+                    <li class="nav-filter-item"><button class="btn-main-nav electric" id="electric"> Electrico </button>
+                    </li>
+                </ul>
+            </nav>
+        </section>
         <section id="main_content">
             <h1> Welcome </h1>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione explicabo facere recusandae repudiandae
