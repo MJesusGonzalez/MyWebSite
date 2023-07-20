@@ -26,32 +26,31 @@
 /* MAIN */
 main {
     background-color: var(--clr-gray);
+    min-height: calc(100vh - 120px);
 }
 
-/* SECTION */
+/* NAV */
 section#main-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     padding-block: 1rem;
     box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.5);
-}
-
-/* NAV */
-.navbar-filter {
     display: flex;
     margin: 0 auto;
+    padding-inline: 2rem;
 }
 
 /* LIST */
 .nav-filter-list {
+    max-width: 1000px;
     list-style-type: none;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 /* BUTTON */
@@ -64,14 +63,93 @@ section#main-nav {
     text-transform: uppercase;
     font-weight: 800;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
-    transition: 0.05s;
+    transition: 0.1s;
 }
 
-.btn-main-nav:hover {
+.btn:hover {
     transform: scale(1.1);
     box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
 }
 
+.btn:active {
+    transform: scale(0.9);
+}
+
+/* MAIN CARDS */
+section#main-cards {
+    padding: 2rem;
+    max-width: 1000px;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+}
+
+/* CARD */
+.pokemon {
+    /*cambiar borrar*/
+    min-width: 250px;
+    border: 2px solid #1c1c1c;
+    border-radius: 1rem;
+    background-color: var(--clr-white);
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
+    padding-block: 1rem;
+    text-transform: uppercase;
+}
+
+.pokemon-img {
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-img img {
+    width: 100%;
+    max-width: 9rem;
+}
+
+.pokemon-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.pokemon-name-cont {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.pokemon-types {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 600;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.type {
+    padding: 0.25rem 0.5rem;
+    border-radius: 100vmax;
+}
+
+/*MEDIA CARDS*/
+/*cambiar por 470*/
+@media screen and (min-width: 510px) {
+    section#main-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*cambiar por 700*/
+@media screen and (min-width: 790px) {
+    section#main-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
 /* COLORS */
 .normal {
@@ -126,7 +204,7 @@ section#main-nav {
 
 .psychic {
     background-color: var(--type-psychic);
-    color: var(--clr-black);
+    color: var(--clr-white);
 }
 
 .bug {
