@@ -64,7 +64,7 @@
     <main>
         <section id="main-nav">
             <ul class="nav-filter-list">
-                <li class="nav-filter-item"><button class="btn btn-main-nav" id="todos"> Todos </button></li>
+                <li class="nav-filter-item"><button class="btn btn-main-nav" id="all"> Todos </button></li>
                 <li class="nav-filter-item"><button class="btn btn-main-nav normal" id="normal"> Normal </button></li>
                 <li class="nav-filter-item"><button class="btn btn-main-nav fire" id="fire"> Fuego </button></li>
                 <li class="nav-filter-item"><button class="btn btn-main-nav water" id="water"> Agua </button></li>
@@ -85,10 +85,10 @@
                 <li class="nav-filter-item"><button class="btn btn-main-nav fairy" id="fairy"> Hada </button>
                 </li>
             </ul>
-
         </section>
+
         <section id="main-cards">
-            <div class="pokemon">
+            <!-- <div class="pokemon">
                 <div class="pokemon-img">
                     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
                         alt="Ditto">
@@ -109,10 +109,8 @@
                         <p class="type rock">roca</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
-
-
     </main>
 
     <footer>
@@ -120,6 +118,8 @@
     </footer>
 
     <script src="../js/dropdownMenu.js"></script>
+    <script type="module" src="../js/pokeAPI.js"></script>
+    <script type="module" src="../js/pokeFilter.js"></script>
 </body>
 
 </html>
