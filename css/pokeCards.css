@@ -238,3 +238,114 @@ section#main-cards {
     background-color: var(--type-fairy);
     color: var(--clr-black);
 }
+
+/* LOGOS */
+.icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    margin: auto;
+    transition: 200ms all;
+}
+
+.icon:hover {
+    filter: saturate(200%);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.icon img {
+    height: 50%;
+    width: 50%;
+    margin: 20%;
+}
+
+.bugLogo {
+    background: #92BC2C;
+    box-shadow: 0 0 20px #92BC2C;
+}
+
+.darkLogo {
+    background: #595761;
+    box-shadow: 0 0 20px #595761;
+}
+
+.dragonLogo {
+    background: #0C69C8;
+    box-shadow: 0 0 20px #0C69C8;
+}
+
+.electricLogo {
+    background: #F2D94E;
+    box-shadow: 0 0 20px #F2D94E;
+}
+
+.fireLogo {
+    background: #FBA54C;
+    box-shadow: 0 0 20px #FBA54C;
+}
+
+.fairyLogo {
+    background: #EE90E6;
+    box-shadow: 0 0 20px #EE90E6;
+}
+
+.fightingLogo {
+    background: #D3425F;
+    box-shadow: 0 0 20px #D3425F;
+}
+
+.flyingLogo {
+    background: #A1BBEC;
+    box-shadow: 0 0 20px #A1BBEC;
+}
+
+.ghostLogo {
+    background: #5F6DBC;
+    box-shadow: 0 0 20px #5F6DBC;
+}
+
+.grassLogo {
+    background: #5FBD58;
+    box-shadow: 0 0 20px #5FBD58;
+}
+
+.groundLogo {
+    background: #DA7C4D;
+    box-shadow: 0 0 20px #DA7C4D;
+}
+
+.iceLogo {
+    background: #75D0C1;
+    box-shadow: 0 0 20px #75D0C1;
+}
+
+.normalLogo {
+    background: #A0A29F;
+    box-shadow: 0 0 20px #A0A29F;
+}
+
+.poisonLogo {
+    background: #B763CF;
+    box-shadow: 0 0 20px #B763CF;
+}
+
+.psychicLogo {
+    background: #FA8581;
+    box-shadow: 0 0 20px #FA8581;
+}
+
+.rockLogo {
+    background: #C9BB8A;
+    box-shadow: 0 0 20px #C9BB8A;
+}
+
+.steelLogo {
+    background: #5695A3;
+    box-shadow: 0 0 20px #5695A3;
+}
+
+.waterLogo {
+    background: #539DDF;
+    box-shadow: 0 0 20px #539DDF;
+}

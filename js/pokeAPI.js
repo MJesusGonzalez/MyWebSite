@@ -57,7 +57,11 @@ function findTypes(data) {
 
 function findElementLogo(data) {
   let elements = data.types.map(
-    (type) => `<h2 class="pokemon-logo fas ${type.type.name}">/</h2>`
+    (type) => `
+    <div class="icon ${type.type.name}Logo">
+      <img src="../img/icons/${type.type.name}.svg" />
+    </div>
+    `
   );
   elements = elements.join(` `);
   return elements;
