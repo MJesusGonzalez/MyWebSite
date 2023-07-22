@@ -58,6 +58,28 @@ a.nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
 }
 
+/* NAV DROPDOWN */
+.item-menu-dropdown {
+    display: none;
+    min-width: 7rem;
+    position: fixed;
+    background-color: rgba(18, 27, 36, 0.8);
+    backdrop-filter: blur(100px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item-menu-dropdown .nav-link {
+    padding: 0.7rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.item-dropdown:hover .item-menu-dropdown {
+    display: block;
+}
+
 /* TOGGLE BUTTON */
 .toggle_btn {
     background-color: transparent;
