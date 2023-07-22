@@ -8,22 +8,32 @@ for (let i = 1; i <= 151; i++) {
     .then((data) => showPokemon(data));
 }
 
-function showPokemon(poke) {
+function showPokemon(data) {
   /* TYPES */
-  let types = findTypes(poke);
+  let types = findTypes(data);
+
+  /* Element logo*/
+  let elementLogo = findElementLogo(data);
+
+  /* Element container*/
+  const div = createCardStyle(data, types, elementLogo);
 
   /* SHOW */
+  mainCards.append(div);
+}
+
+function createCardStyle(data, types, elementLogo) {
   const div = document.createElement("div");
   div.classList.add("pokemon");
   div.innerHTML = `
     <div class="pokemon-img">
-        <img src="${poke.sprites.other["official-artwork"].front_default}"
-        alt="${poke.name}">
+        <img src="${data.sprites.other["official-artwork"].front_default}"
+        alt="${data.name}">
     </div>
     <div class="pokemon-info">
         <div class="pokemon-name-cont">
-            <h2 class="pokemon-logo fas fa-fire-flame-curved"></h2>
-            <h2 class="pokemon-name">${poke.name}</h2>
+            ${elementLogo}
+            <h2 class="pokemon-name">${data.name}</h2>
         </div>
         <div class="pokemon-types">
             ${types}
@@ -34,14 +44,23 @@ function showPokemon(poke) {
         </div>
     </div>
   `;
-  mainCards.append(div);
+  return div;
 }
 
-function findTypes(poke) {
-  let types = poke.types.map(
+function findTypes(data) {
+  let types = data.types.map(
     (type) => `<p class="type ${type.type.name}">${type.type.name}</p>`
   );
   types = types.join(``);
   return types;
 }
+
+function findElementLogo(data) {
+  let elements = data.types.map(
+    (type) => `<h2 class="pokemon-logo fas ${type.type.name}">/</h2>`
+  );
+  elements = elements.join(` `);
+  return elements;
+}
+
 export { showPokemon };
