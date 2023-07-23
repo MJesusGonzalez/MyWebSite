@@ -1,14 +1,31 @@
 const mainCards = document.querySelector("#main-cards");
+const loadMore = document.querySelector(".content-loadMore");
 let URL = "https://pokeapi.co/api";
 //let URL2 = "https://pokeapi.co/api/v2/type/";
 
-for (let i = 1; i <= 151; i++) {
-  fetch(URL + "/v2/pokemon/" + i)
+let offset = 1;
+let limit = 29;
+
+loadMore.addEventListener("click", () => {
+  offset += 30;
+  searchPokemon(offset, limit);
+});
+
+function fetchPokemon(id) {
+  fetch(URL + "/v2/pokemon/" + id)
     .then((response) => response.json())
     .then((data) => showPokemon(data));
 }
 
+function searchPokemon(offset, limit) {
+  for (let i = offset; i <= offset + limit; i++) {
+    fetchPokemon(i);
+  }
+}
+
 function showPokemon(data) {
+  /* ID */
+  let pId = pokemonID(data);
   /* TYPES */
   let types = findTypes(data);
 
@@ -16,13 +33,13 @@ function showPokemon(data) {
   let elementLogo = findElementLogo(data);
 
   /* Element container*/
-  const div = createCardStyle(data, types, elementLogo);
+  const div = createCardStyle(data, types, elementLogo, pId);
 
   /* SHOW */
   mainCards.append(div);
 }
 
-function createCardStyle(data, types, elementLogo) {
+function createCardStyle(data, types, elementLogo, pId) {
   const div = document.createElement("div");
   div.classList.add("pokemon");
   div.innerHTML = `
@@ -32,8 +49,11 @@ function createCardStyle(data, types, elementLogo) {
     </div>
     <div class="pokemon-info">
         <div class="pokemon-name-cont">
-            ${elementLogo}
+            <h3 class="pokemon-id">#${pId}</h3>
             <h2 class="pokemon-name">${data.name}</h2>
+        </div>
+        <div class="pokemon-types">
+            ${elementLogo}
         </div>
         <div class="pokemon-types">
             ${types}
@@ -45,6 +65,17 @@ function createCardStyle(data, types, elementLogo) {
     </div>
   `;
   return div;
+}
+
+function pokemonID(data) {
+  let pokeId = data.id.toString();
+  if (pokeId.length === 1) {
+    pokeId = "00" + pokeId;
+    console.log(pokeId);
+  } else if (pokeId.length === 2) {
+    pokeId = "0" + pokeId;
+  }
+  return pokeId;
 }
 
 function findTypes(data) {
@@ -66,5 +97,7 @@ function findElementLogo(data) {
   elements = elements.join(` `);
   return elements;
 }
+
+searchPokemon(offset, limit);
 
 export { showPokemon };
