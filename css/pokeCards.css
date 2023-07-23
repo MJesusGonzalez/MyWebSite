@@ -62,7 +62,7 @@ section#main-cards {
 .pokemon {
     min-width: 250px;
     border: 2px solid #1c1c1c;
-    border-radius: 1rem;
+    border-radius: 3vmax;
     background-color: #f7f7f7;
     box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25);
     padding-block: 1rem;
@@ -227,7 +227,7 @@ section#main-cards {
 .icon {
     height: 35px;
     width: 35px;
-    border-radius: 100%;
+    border-radius: 100vmax;
     margin: auto;
     transition: 200ms all;
 }
@@ -241,7 +241,7 @@ section#main-cards {
 .icon img {
     height: 50%;
     width: 50%;
-    margin: 20%;
+    margin: 25%;
 }
 
 .bugLogo {
